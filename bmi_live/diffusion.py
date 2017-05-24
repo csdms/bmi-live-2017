@@ -25,7 +25,7 @@ class Diffusion(object):
         self.dt = min(self.dx, self.dy) ** 2.0 / (4.0 * self.alpha)
         self.dt /= 2.0
 
-        self.temperature = np.zeros((self.nx, self.ny))
+        self.temperature = np.zeros((self.ny, self.nx))
         self.new_temperature = self.temperature.copy()
 
     def advance(self):
