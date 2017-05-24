@@ -15,8 +15,8 @@ class Diffusion(object):
             for key, value in parameters.items():
                 setattr(self, key, value)
         else:
-            self.nx = 10
-            self.ny = 10
+            self.nx = 8
+            self.ny = 6
             self.dx = 1.0
             self.dy = 1.0
             self.alpha = 0.9
@@ -40,8 +40,8 @@ class Diffusion(object):
         dx2, dy2 = self.dx**2, self.dy**2
         coef = self.alpha * self.dt / (2.0*(dx2 + dy2))
 
-        for j in range(1, self.ny-1):
-            for i in range(1, self.nx-1):
+        for i in range(1, self.ny-1):
+            for j in range(1, self.nx-1):
                 self.new_temperature[i,j] = \
                     self.temperature[i,j] + coef * (
                     dx2*(self.temperature[i,j-1] + self.temperature[i,j+1]) +
