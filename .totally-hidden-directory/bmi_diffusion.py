@@ -184,7 +184,7 @@ class BmiDiffusion(Bmi):
         array_like
             Value array.
         """
-        return self._values[var_name].flat
+        return self._values[var_name].reshape(-1)
 
     def get_value(self, var_name):
         """Copy of values.
