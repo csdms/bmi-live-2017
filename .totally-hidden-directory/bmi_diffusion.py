@@ -73,7 +73,9 @@ class BmiDiffusion(Bmi):
 
         for _ in range(int(n_steps)):
             self.update()
-        self.update_frac(n_steps - int(n_steps))
+        
+        if (n_steps - int(n_steps)) > 0.0:
+            self.update_frac(n_steps - int(n_steps))
 
     def finalize(self):
         """Finalize model."""
