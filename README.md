@@ -1,3 +1,6 @@
+This repository has been archived. Please see the [bmi-live](https://github.com/csdms/bmi-live) repository for the latest BMI Live! clinic material.
+
+```
 # BMI Live
 
 Code for the **BMI Live** clinic
@@ -28,3 +31,4 @@ We also hope show some best practices in Python development.
   distribution)
 * Optionally, a [GitHub](https://github.com) account, and `git` or
   GitHub Desktop
+```
